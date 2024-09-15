@@ -7,7 +7,7 @@ import {handleMenu} from "./homePageFunctions/HandleMenu.js";
 
 function App() {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -16,7 +16,7 @@ function App() {
 
     return (
         <>
-            <nav className="px-6 py-3  flex bg-white justify-between items-center drop-shadow-sm" id="nav-bar">
+            <nav className="px-6 py-5  flex bg-white justify-between items-center drop-shadow-sm" id="nav-bar">
                 <a href="/" id="brand-logo" className="flex flex-row justify-center items-center gap-2">
                     <img className=" w-[50px] h-[40px] " src={student2developer} alt=""/>
 
@@ -52,26 +52,49 @@ function App() {
 
                 {/*/!*incomplete functionality*!/*/}
                 {/*/!*${isMenuOpen ? 'block' : 'hidden'*!/*/}
-                <div className="fixed flex justify-between bg-white px-6 py-3 inset-0 z-50 ${isMenuOpen ? 'block' : 'hidden'} lg:hidden">
+                <div className={`fixed   bg-white px-6 py-5 inset-0 z-50 ${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
 
-                    <a href="/" id="brand-logo" className="flex flex-row justify-center items-center gap-2">
-                        <img className=" w-[50px] h-[40px] " src={student2developer} alt=""/>
+                    <div id="navbar-mobile" className={`flex   justify-between`}>
+                        <a href="/" id="brand-logo" className="flex items-center gap-2">
+                            <img className=" w-[50px] h-[40px] " src={student2developer} alt=""/>
 
-                        <span id="brand" className="  font-font3 font-medium text-xl  text-blackboot ">
-                        Student2Developer
-                    </span>
-                    </a>
+                            <span id="brand" className="  font-font3 font-medium text-xl  text-blackboot ">
+                                  Student2Developer
+                            </span>
+                        </a>
+                        <button id="mobile-menu" className={`lg:hidden text-gray-800 text-xl p-2 `}
+                                onClick={handleMenu}>
+                            <FontAwesomeIcon className="text-lg" icon="fa-solid fa-xmark"/>
+                        </button>
+                    </div>
 
-                    <button id="mobile-menu"
-                            className={`lg:hidden text-gray-800 text-xl p-2 `}
-                            onClick={handleMenu}>
+                    <div id="menu-options" className={`flex flex-col mt-2`}>
 
-                        <FontAwesomeIcon className="text-lg" icon="fa-solid fa-cross"/>
-                        <FontAwesomeIcon className="text-lg" icon="fa-solid fa-xmark" />
+                        <a href="/task" id="task"
+                           className="font-medium m-3 p-3  rounded-md hover:bg-gray-50  cursor-pointer">Task</a>
+                        <a href="/community" id="community"
+                           className="font-medium m-3 p-3  rounded-md hover:bg-gray-50  cursor-pointer">Community</a>
+                        <a href="/products" id="products"
+                           className="font-medium m-3 p-3  rounded-md hover:bg-gray-50  cursor-pointer">Products</a>
+                        <a href="/login" id="login"
+                           className="font-medium m-3 p-3  rounded-md hover:bg-gray-50  cursor-pointer">Login</a>
+                        <a href="/miniprojects" id="miniprojects"
+                           className="font-medium m-3 p-3  rounded-md hover:bg-gray-50  cursor-pointer">Mini Projects</a>
+                        <a href="/majorprojects" id="majorprojects"
+                           className="font-medium m-3 p-3  rounded-md hover:bg-gray-50  cursor-pointer">Major Projects</a>
+                        <a href="/Certifications" id="Certifications"
+                           className="font-medium m-3 p-3  rounded-md hover:bg-gray-50  cursor-pointer">Certifications</a>
 
+                    </div>
+
+
+                    <button id="getStarted"
+                            className=" font-medium m-3 p-3 w-full mr-12  gap-2 rounded-md hover:bg-gray-50  cursor-pointer flex flex-row   items-center  text-gray-950 rounded-md text-md font-medium shadow-sm border border-gray-300  font-font1  hover:border-gray-400 transition  ">
+                        <p>Get Started</p>
+                        <FontAwesomeIcon className="text-gray-400 text-md" icon="fa-solid fa-arrow-right"/>
                     </button>
-
                 </div>
+
 
             </nav>
         </>
