@@ -4,6 +4,21 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import student2developer from "./brandLogo/student2developer.svg"
 // import bootcoding from "./brandLogo/bootcoding.svg"
 import {handleMenu} from "./homePageFunctions/HandleMenu.js";
+import Below0 from "./assets/image-section/BELOW0.svg"
+import Below from "./assets/image-section/BELOW.svg"
+import butterflyArrowSVG from "./assets/image-section/butterflyArrow.svg"
+import butterflyArrow2 from "./assets/image-section/butterflyArrow2.svg"
+import allFree from "./assets/image-section/feature-flags/allFree.svg"
+import amateurCoding from "./assets/image-section/feature-flags/amateurCoding.svg"
+import clearAim from "./assets/image-section/feature-flags/clearAim.svg"
+import communitySupport from "./assets/image-section/feature-flags/communitySupport.svg"
+import confused from "./assets/image-section/feature-flags/confused.svg"
+import industryLevelProjects from "./assets/image-section/feature-flags/industryLevelProjects.svg"
+import industryPractices from "./assets/image-section/feature-flags/industryPractices.svg"
+import noFreePlatform from "./assets/image-section/feature-flags/noFreePlatform.svg"
+import noProjects from "./assets/image-section/feature-flags/noProjects.svg"
+import {clear} from "@testing-library/user-event/dist/clear";
+
 
 function App() {
 
@@ -104,15 +119,15 @@ function App() {
             </nav>
 
             {/*main*/}
-            <main>
+            <main className={`bg-gradient-to-br from-orange-100/60 via-red-50/70  to-transparent`}>
                 {/*hero section*/}
                 <div
-                    className={` px-6 sm:flex sm:flex-col  min-h-screen bg-gradient-to-br from-orange-50 via-purple-50 to-transparent`}>
+                    className={` px-6 sm:flex sm:flex-col`}>
 
                     {/*    <div id="hero-section" className={`  lg:px-8 pt-8*/}
                     {/*sm:pt-14   h-screen   lg:justify-center lg:mx-auto lg:max-w-3xl`}>*/}
                     <div id="hero-section"
-                         className={`mx-auto max-w-4xl pt-8 pb-32 sm:pt-14 sm:pb-20 sm:flex sm:flex-col sm:items-center`}>
+                         className={`mx-auto max-w-4xl pt-8 pb-32 sm:pt-14 sm:pb-15 sm:flex sm:flex-col sm:items-center`}>
 
                         {/*<button id="task-of-the-day"*/}
                         {/*        className={`group hover:-translate-y-0.5 hover:transition hover:ease-in-out hover:duration-200 shadow-sm hover:shadow-lg hover:shadow-yellow-700/10  cursor-pointer px-4 py-1 mb-8 rounded-lg border border-yellow-200 hover:border-yellow-600/40 flex flex-row gap-2 justify-center items-center bg-yellow-100/60 text-yellow-900 font-medium `}>*/}
@@ -126,13 +141,13 @@ function App() {
                         {/*</button>*/}
 
                         <button id="task-of-the-day"
-                                className={`group w-fit hover:-translate-y-0.5 hover:transition hover:ease-in-out hover:duration-200 shadow-sm hover:shadow-lg hover:shadow-red-700/10  cursor-pointer px-4 py-1 mb-8 rounded-lg border border-red-200 hover:border-red-600/40 flex flex-row gap-2 justify-center items-center bg-red-100/60 text-red-900 font-medium `}>
+                                className={`group w-fit hover:-translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-sm hover:shadow-lg hover:shadow-red-700/10  cursor-pointer px-4 py-1 mb-8 rounded-lg border border-red-200 hover:border-red-600/40 flex flex-row gap-2 justify-center items-center bg-red-100/60 text-red-900 font-medium `}>
                             <div className={`h-2 w-2 rounded-full bg-red-400 border border-red-500`}></div>
                             <p className={`items-center`} id="task-of-the-day">
                                 Task of the Day
                             </p>
                             <FontAwesomeIcon
-                                className={`text-red-500 group-hover:text-red-600 group-hover:translate-x-1 group-hover:transition group-hover:ease-in-out group-hover:duration-700  text-md items-center`}
+                                className={`text-red-500 group-hover:text-red-600 group-hover:translate-x-1 group-hover:transition group-hover:ease-in group-hover:ease-out duration-700  text-md items-center`}
                                 icon="fa-solid fa-arrow-right"/>
                         </button>
 
@@ -143,8 +158,8 @@ function App() {
                         <div id="hero-subheadline"
                              className={` font-font2 text-xl leading-8 text-gray-600 sm:text-2xl sm:text-center `}>
 
-                             Transform yourself from student into a industry level developer with our
-                            guided learning paths and  real world projects.
+                            Transform yourself from student into a industry level developer with our
+                            guided learning paths and real world projects.
                         </div>
 
                         <div className={`mt-12 flex flex-col gap-4 text-center sm:flex-row sm:justify-center`}>
@@ -160,10 +175,111 @@ function App() {
 
 
                     </div>
-                    <div>hello</div>
+
                 </div>
 
 
+                <div className={`relative max-w-9xl mx-auto resize-none hidden lg:block `}>
+                    <div className={`inset-0 absolute z-50 h-screen w-full`}></div>
+
+                    {/*<div id={`boxred`}*/}
+                    {/*     className={`hover:-translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-purple-950/10    hover:translate-y-0.5   rounded-lg z-50 absolute bottom-[340px] left-40`}>*/}
+                    {/*    <img className={`h-22 w-36`} src={allFree} alt=""/>*/}
+                    {/*</div>*/}
+
+                    <div id={`onlyonweb-section`}
+                         className={`hidden lg:block mx-auto  py-5 max-w-7xl -mt-2 flex  flex-col justify-center text-center items-center`}>
+
+                        <div id="inner-onlyonweb-section">
+                            <h1 className={`font-font2 text-image-section text-red-500 font-bold `}> "Transform you into
+                                your
+                                better self"</h1>
+
+
+                        </div>
+                    </div>
+
+                    <div id={`boxred`}
+                         className={`  hover:translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-slate-600/30   cursor-pointer rounded-lg z-50 absolute bottom-[360px] left-[230px]`}>
+                        <img className={`h-16 w-full`} src={noProjects} alt=""/>
+                    </div>
+
+                    <div id={`boxred`}
+                         className={`hover:translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-slate-600/30   cursor-pointer  rounded-lg z-50  absolute bottom-[310px] left-[60px]`}>
+                        <img className={`h-16 w-full`} src={amateurCoding} alt=""/>
+                    </div>
+                    <div id={`boxred`}
+                         className={`hover:translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-slate-600/30    cursor-pointer  rounded-lg z-50  absolute bottom-[210px] left-[30px]`}>
+                        <img className={`h-12 w-full`} src={confused} alt=""/>
+                    </div>
+                    <div id={`boxred`}
+                         className={`  hover:translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-slate-600/30   cursor-pointer rounded-lg z-50 absolute bottom-[285px] left-[350px]`}>
+                        <img className={`h-14 w-full`} src={noFreePlatform} alt=""/>
+                    </div>
+
+                    {/*second image feature flags*/}
+                    <div id={`boxred`}
+                         className={`  hover:-translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-red-600/30   cursor-pointer rounded-lg z-50 absolute bottom-[370px] right-[320px]`}>
+                        <img className={`h-16 w-full`} src={communitySupport} alt=""/>
+                    </div>
+
+                    <div id={`boxred`}
+                         className={`hover:-translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-red-600/30   cursor-pointer  rounded-lg z-50  absolute bottom-[300px] right-[150px]`}>
+                        <img className={`h-16 w-full`} src={industryLevelProjects} alt=""/>
+                    </div>
+                    <div id={`boxred`}
+                         className={`hover:-translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-red-600/30    cursor-pointer  rounded-lg z-50  absolute bottom-[230px] right-[50px]`}>
+                        <img className={`h-14 w-full`} src={clearAim} alt=""/>
+                    </div>
+                    <div id={`boxred`}
+                         className={`  hover:-translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-red-600/30   cursor-pointer rounded-lg z-50 absolute bottom-[280px] right-[450px]`}>
+                        <img className={`h-16 w-full`} src={industryPractices} alt=""/>
+                    </div>
+                    <div id={`boxred`}
+                         className={`  hover:-translate-y-0.5 hover:transition hover:ease-in hover:ease-out duration-300 shadow-md hover:shadow-lg hover:shadow-red-600/30   cursor-pointer rounded-lg z-50 absolute bottom-[200px] right-[530px]`}>
+                        <img className={`h-[50px] w-full`} src={allFree} alt=""/>
+                    </div>
+
+
+                    <div id={`onlyonweb-section`}
+                         className={`hidden relative lg:flex  max-w-8xl px-9 mt-24 flex-row justify-between  `}>
+
+                        {/*<div id="image-secion">*/}
+
+                        {/*    <img className={` ml-16 w-full h-96  ml-5 `} src={Below0} alt="1st image"/>*/}
+                        {/*</div>*/}
+                        {/*<div id="image-secion">*/}
+
+                        {/*    <img className={`object-contain  `} src={butterflyArrow} alt="1st image"/>*/}
+                        {/*</div>*/}
+
+                        {/*<div id="image-secion">*/}
+
+                        {/*    <img className={`w-full h-96 mr-10 `} src={Below} alt="1st image"/>*/}
+                        {/*</div>*/}
+
+                        <div id="image-secion" className={`relative   `}>
+
+
+                            <img className={` w-full h-80  ml-10 mt-12 `} src={Below0} alt="1st image"/>
+                        </div>
+                        <div id="image-secion">
+
+                            <img className={`   h-[210px] w-[210px]  `} src={butterflyArrow2} alt="1st image"/>
+                        </div>
+
+                        <div id="image-secion">
+
+                            <img className={`w-full h-80 mr-12  mt-12 `} src={Below} alt="1st image"/>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div className={`h-[1000px]`}>
+
+                </div>
             </main>
 
         </>

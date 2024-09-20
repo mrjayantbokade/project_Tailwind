@@ -6,3 +6,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.text-image-section {
+    font-size: 112px;
+    line-height: 1; }
